@@ -9,6 +9,8 @@ import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 import docstree from "../../Assets/Projects/docs-tree.png";
+import hewantsbarber from "../../Assets/Projects/hewantsbarber.png";
+import reboucasofficial from "../../Assets/Projects/reboucasofficial.png";
 
 function Projects() {
   return (
@@ -30,6 +32,26 @@ function Projects() {
               description="international platform for searching documents and freelance jobs."
               ghLink=""
               demoLink="https://docs-tree.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={reboucasofficial}
+              isBlog={false}
+              title="Rebouças University"
+              description="Institutional platform for presenting courses, sales, etc..."
+              ghLink=""
+              demoLink="#"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hewantsbarber}
+              isBlog={false}
+              title="He Wants Barber"
+              description="Complete dashboard to sales, registration, set service dates, etc..."
+              ghLink=""
+              demoLink="#"
             />
           </Col>
 

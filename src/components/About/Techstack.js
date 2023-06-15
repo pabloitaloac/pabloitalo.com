@@ -1,14 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-} from "react-icons/di";
+import * as DiIcons from "react-icons/di";
 import {
   SiPytorch,
   SiFirebase,
@@ -18,36 +11,42 @@ import {
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col> */}
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <DiIcons.DiReact title="React + React Native" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <DiIcons.DiNodejs  title="Node" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <DiIcons.DiJavascript1  title="Javascript" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col> */}
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
+        <DiIcons.DiMongodb  title="Mongodb" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <DiIcons.DiDatabase  title="Databases" />
       </Col>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col> */}
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
-      </Col> */}
+      <Col xs={4} md={2} className="tech-icons">
+        <DiIcons.DiPython  title="Python" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiIcons.DiApple  title="iOS" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiIcons.DiAndroid  title="Android" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiIcons.DiHtml5  title="Html5" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiIcons.DiCss3  title="Css3" />
+      </Col>
+
+
+
+
+
+
     </Row>
   );
 }

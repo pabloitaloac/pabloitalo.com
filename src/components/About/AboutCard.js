@@ -4,36 +4,35 @@ import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view">
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Pablo Ítalo </span>
-            from <span className="purple"> Brazil.</span>
-            <br />I am a Full Stack Developer with MERN Stack.
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
-          </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Watching Animes
-            </li>
-          </ul>
+<Card className="quote-card-view">
+  <Card.Body>
+    <blockquote className="blockquote mb-0">
+      <p style={{ textAlign: "justify" }}>
+        Hello everyone, I'm <span className="purple">Pablo Ítalo</span>, a <span className="purple">Senior Full Stack Developer</span>.
+        <br />I work with various technologies, including <span className="purple">React</span>, <span className="purple">React Native</span>, <span className="purple">Node</span>, and <span className="purple">more</span>.
+        <br />With my knowledge, I create diverse features such as <span className="purple">Web Pages</span>, <span className="purple">Panels</span>, and <span className="purple">APIs</span>.
+        <br />
+        Besides coding, there are a few other activities that I love to engage in!
+      </p>
+      <ul>
+        <li className="about-activity">
+          <ImPointRight /> Playing Games
+        </li>
+        <li className="about-activity">
+          <ImPointRight /> Travelling
+        </li>
+        <li className="about-activity">
+          <ImPointRight /> Watching Anime
+        </li>
+      </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Always do your best!"{" "}
-          </p>
-          <footer className="blockquote-footer">pabloitaloac</footer>
-        </blockquote>
-      </Card.Body>
-    </Card>
+      <p style={{ color: "rgb(155, 126, 172)" }}>
+        "Always do your best!"
+      </p>
+      <footer className="blockquote-footer">- pabloitaloac</footer>
+    </blockquote>
+  </Card.Body>
+</Card>
   );
 }
 

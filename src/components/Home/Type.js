@@ -6,16 +6,16 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "Developer",
-          "MERN Stack Developer",
-          "React.JS",
+          "Senior Full Stack Developer",
+          "React + React Native",
+          "Node",
           "MongoDB",
-          "Express.JS",
-          "Node.JS",
+          "Express",
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        deleteSpeed: 5,
+        delay:50,
       }}
     />
   );

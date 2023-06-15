@@ -11,30 +11,30 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className="home-about-section" id="about" style={{marginTop:-200}}>
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in modern languages and frameworks like 
-              <i>
-                <b className="purple"> JavaScript, React.JS, MongoDB, Express.JS and Node.JS. </b>
-              </i>
-              Ahhh, and I also like a little Python
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products. </b>
-              </i>
-            </p>
-          </Col>
+        <Col md={8} className="home-about-description">
+  <h1 style={{ fontSize: "2.6em" }}>
+    LET ME <span className="purple">INTRODUCE</span> MYSELF
+  </h1>
+  <p className="home-about-body">
+    I fell in love with programming and I have learned a great deal.
+    <br />
+    <br />
+    I am proficient in modern languages and frameworks such as{" "}
+    <i>
+      <b className="purple">JavaScript, React, MongoDB, Express, and Node. </b>
+    </i>
+    Additionally, I have experience with Python, PHP, WordPress, and other technologies.
+    <br />
+    <br />
+    My field of interest lies in developing innovative{" "}
+    <i>
+      <b className="purple">Web and Mobile Technologies and varied solutions.</b>
+    </i>
+  </p>
+</Col>
           <Col md={4} className="myAvtar">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
@@ -70,7 +70,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/pabloitalo/"
+                  href="https://www.linkedin.com/in/pablo-italo/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
