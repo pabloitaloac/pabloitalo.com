@@ -398,6 +398,18 @@ button:focus {
   color: #700c86 !important;
 }
 
+.menu-flags{
+  margin: auto;
+}
+.menu-flags-button{
+  background-color: white;
+  cursor: pointer;
+}
+.menu-flags-button:disabled{
+  background-color: rgb(255, 255, 255);
+  cursor:no-drop;
+}
+
 /* --------- */
 /* Footer */
 /* --------- */
@@ -448,7 +460,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: var(--section-background-color) ;
 }
 
 .project-card {
@@ -532,7 +544,7 @@ button:focus {
   box-shadow: none !important;
 }
 .project-heading {
-  color: white !important;
+  color: white ;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -546,7 +558,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: var(--section-background-color) ;
   color: white !important;
 }
 
@@ -606,7 +618,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: var(--section-background-color) ;
   color: white !important;
 }
 
@@ -691,6 +703,10 @@ button:focus {
   font-family: sans-serif !important;
 }
 
+.cardtoshowcv{
+  border:5px solid #934cce5e;
+}
+
 .like-btn {
   background-color: #934cce5e !important;
   border-color: #934cce5e !important;
@@ -722,7 +738,6 @@ button:focus {
 
 .fork-btn {
   font-size: 1.1em !important;
-  padding-top: 10px !important;
 }
 
 .fork-btn-inner {

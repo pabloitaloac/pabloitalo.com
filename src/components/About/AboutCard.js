@@ -1,12 +1,15 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import {useTheme} from "../themetype";
 
 function AboutCard() {
+  const { nightMode } = useTheme();
+
   return (
-<Card className="quote-card-view">
+<Card className="quote-card-view" style={{color:!nightMode&&'black', }}>
   <Card.Body>
-    <blockquote className="blockquote mb-0">
+    <blockquote className="blockquote mb-0" style={{color:!nightMode&&'black', }}>
       <p style={{ textAlign: "justify" }}>
         Hello everyone, I'm <span className="purple">Pablo Ítalo</span>, a <span className="purple">Senior Full Stack Developer</span>.
         <br />I work with various technologies, including <span className="purple">React</span>, <span className="purple">React Native</span>, <span className="purple">Node</span>, and <span className="purple">more</span>.

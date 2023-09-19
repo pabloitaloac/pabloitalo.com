@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 function Type() {
   return (
     <Typewriter
+    
       options={{
         strings: [
           "Senior Full Stack Developer",
@@ -16,6 +17,7 @@ function Type() {
         loop: true,
         deleteSpeed: 5,
         delay:50,
+        
       }}
     />
   );

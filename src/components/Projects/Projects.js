@@ -11,16 +11,31 @@ import bitsOfCode from "../../Assets/Projects/blog.png";
 import docstree from "../../Assets/Projects/docs-tree.png";
 import hewantsbarber from "../../Assets/Projects/hewantsbarber.png";
 import reboucasofficial from "../../Assets/Projects/reboucasofficial.png";
+import {useTheme} from "../themetype";
 
 function Projects() {
+  const { nightMode } = useTheme();
+
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-section"      
+      style={{
+      backgroundColor:!nightMode&&'white', 
+      backgroundImage:!nightMode&&'none',
+      color:!nightMode&&'black'
+      }}
+    >
       <Particle />
-      <Container>
-        <h1 className="project-heading">
+      <Container         
+        style={{
+        backgroundColor:!nightMode&&'white', 
+        backgroundImage:!nightMode&&'none',
+        color:!nightMode&&'black'
+        }}
+      >
+        <h1 className="project-heading" style={{color:!nightMode&&'black'}}>
           My Recent <strong className="purple">Works </strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p style={{ color:!nightMode?'black':'white' }}>
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>

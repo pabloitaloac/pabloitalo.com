@@ -6,15 +6,20 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import  {useTheme} from "./themetype";
 
 function Footer() {
+  const {nightMode,toggleTheme}=useTheme()
+
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <Container fluid className="footer">
+    <Container fluid className="footer"             style={{backgroundColor:!nightMode&&'black', zIndex:'999999999999'}}
+
+    >
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Developed by Pablo Ítalo</h3>
+          <h3>Developed with ❤️ by Pablo Ítalo</h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} Pablo Italo</h3>
