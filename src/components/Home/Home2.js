@@ -10,7 +10,7 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import {useTheme} from "../themetype";
 
-function Home2() {
+function Home2(props) {
   const { nightMode } = useTheme();
 
   return (
@@ -18,23 +18,23 @@ function Home2() {
       <Container>
         <Row>
         <Col md={8} className="home-about-description" style={{ color:!nightMode&&'black', }}>
-  <h1 style={{ fontSize: "2.6em", color:!nightMode&&'black',  }}>
-    LET ME <span className="purple">INTRODUCE</span> MYSELF
+  <h1 style={{ fontSize: "2.6em", color:!nightMode&&'black',  textTransform:'uppercase'}}>
+    {props.datatoShow.home4} <span className="purple">{props.datatoShow.home5}</span> {props.datatoShow.home6}
   </h1>
   <p className="home-about-body" style={{zIndex:'9999', color:!nightMode&&'black', }}>
-    I fell in love with programming and I have learned a great deal.
+  {props.datatoShow.home7}
     <br />
     <br />
-    I am proficient in modern languages and frameworks such as{" "}
+    {props.datatoShow.home8}{" "}
     <i>
-      <b className="purple">JavaScript, React, MongoDB, Express, and Node. </b>
+      <b className="purple">{props.datatoShow.home9} </b>
     </i>
-    Additionally, I have experience with Python, PHP, WordPress, and other technologies.
+    {props.datatoShow.home10}
     <br />
     <br />
-    My field of interest lies in developing innovative{" "}
+    {props.datatoShow.home11}{" "}
     <i>
-      <b className="purple">Web and Mobile Technologies and varied solutions.</b>
+      <b className="purple">{props.datatoShow.home12}</b>
     </i>
   </p>
 </Col>
@@ -46,9 +46,9 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1 style={{zIndex:'9999', color:!nightMode&&'black', }}>FIND ME ON</h1>
+            <h1 style={{zIndex:'9999', color:!nightMode&&'black', }}>{props.datatoShow.home13}</h1>
             <p style={{zIndex:'9999', color:!nightMode&&'black', }}>
-              Feel free to <span className="purple">connect </span>with me
+            {props.datatoShow.home14} <span className="purple">{props.datatoShow.home15} </span>{props.datatoShow.home16}
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">

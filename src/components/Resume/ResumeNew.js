@@ -6,6 +6,7 @@ import pdf from "../../Assets/../Assets/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import {useTheme} from "../themetype";
+import { translation } from "../translation";
 
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -13,6 +14,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const totalpages = [{singlepage:1},{singlepage:2},{singlepage:3},]
 function ResumeNew() {
   const { nightMode } = useTheme();
+  const datatoShow = translation()
 
   const [width, setWidth] = useState(1200);
 
@@ -41,17 +43,19 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;{datatoShow.resume1}
           </Button>
         </Row>
 
         <Row className="resume" style={{gap:'10px'}}>
           {totalpages && totalpages.map((single)=>{
-            return(
+            if(single.singlepage){
+              return(
                 <Document file={pdf} className="d-flex justify-content-center " key={single.singlepage}>
                   <Page pageNumber={single.singlepage} scale={width > 786 ? 1.7 : 0.6}  />
                 </Document>
             )
+          }
           })}
         </Row>
 
@@ -63,7 +67,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;{datatoShow.resume1}
           </Button>
         </Row>
       </Container>

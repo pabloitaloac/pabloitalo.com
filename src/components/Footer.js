@@ -7,9 +7,11 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import  {useTheme} from "./themetype";
+import { translation } from "./translation";
 
 function Footer() {
   const {nightMode,toggleTheme}=useTheme()
+  const datatoShow = translation()
 
   let date = new Date();
   let year = date.getFullYear();
@@ -19,10 +21,10 @@ function Footer() {
     >
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Developed with ❤️ by Pablo Ítalo</h3>
+          <h3>{datatoShow.footer1}</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} Pablo Italo</h3>
+          <h3>{datatoShow.footer2}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">

@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 import {useTheme} from "../themetype";
 
-function AboutCard() {
+function AboutCard(props) {
   const { nightMode } = useTheme();
 
   return (
@@ -11,26 +11,26 @@ function AboutCard() {
   <Card.Body>
     <blockquote className="blockquote mb-0" style={{color:!nightMode&&'black', }}>
       <p style={{ textAlign: "justify" }}>
-        Hello everyone, I'm <span className="purple">Pablo Ítalo</span>, a <span className="purple">Senior Full Stack Developer</span>.
-        <br />I work with various technologies, including <span className="purple">React</span>, <span className="purple">React Native</span>, <span className="purple">Node</span>, and <span className="purple">more</span>.
-        <br />With my knowledge, I create diverse features such as <span className="purple">Web Pages</span>, <span className="purple">Panels</span>, and <span className="purple">APIs</span>.
+      {props.datatoShow.about3} <span className="purple">Pablo Ítalo</span>{props.datatoShow.about5} <span className="purple">{props.datatoShow.about6}</span>.
+        <br />{props.datatoShow.about7} <span className="purple">{props.datatoShow.about8}</span>
+        <br />{props.datatoShow.about9} <span className="purple">{props.datatoShow.about10}</span>
         <br />
-        Besides coding, there are a few other activities that I love to engage in!
+        {props.datatoShow.about11}
       </p>
       <ul>
         <li className="about-activity">
-          <ImPointRight /> Playing Games
+          <ImPointRight /> {props.datatoShow.about12}
         </li>
         <li className="about-activity">
-          <ImPointRight /> Travelling
+          <ImPointRight /> {props.datatoShow.about13}
         </li>
         <li className="about-activity">
-          <ImPointRight /> Watching Anime
+          <ImPointRight /> {props.datatoShow.about14}
         </li>
       </ul>
 
       <p style={{ color: "rgb(155, 126, 172)" }}>
-        "Always do your best!"
+      {props.datatoShow.about15}
       </p>
       <footer className="blockquote-footer">- pabloitaloac</footer>
     </blockquote>

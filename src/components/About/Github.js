@@ -3,13 +3,13 @@ import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
 import {useTheme} from "../themetype";
 
-function Github() {
+function Github(props) {
   const { nightMode } = useTheme();
 
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px", color:!nightMode&&'black', }}>
       <h1 className="project-heading" style={{ paddingBottom: "20px", color:!nightMode&&'black',  }}>
-        Days I <strong className="purple">Code</strong>
+      {props.datatoShow.about20} <strong className="purple">{props.datatoShow.about21}</strong>
       </h1>
       <GitHubCalendar
         username="pabloitaloac"

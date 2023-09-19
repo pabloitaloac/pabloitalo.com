@@ -4,12 +4,15 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { translation } from "../translation";
+
 
   import {useTheme} from "../themetype";
 
 function Home() {
         const { nightMode } = useTheme();
 
+        const datatoShow = translation()
 
   return (
     <section 
@@ -26,19 +29,19 @@ function Home() {
           <Row >
             <Col md={7} className="home-header" >
               <h1 style={{ paddingBottom: 15 ,  color:!nightMode&&'black',}} className="heading">
-                Hi There!{" "}
+                {datatoShow.home1}{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
               <h1 className="heading-name" style={{zIndex:'9999', color:!nightMode&&'black', }}>
-                I'M
+              {datatoShow.home2}
                 <strong className="main-name" style={{zIndex:'9999', color:!nightMode&&'black', }}> PABLO ÍTALO</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" , zIndex:'9999', color:!nightMode&&'black', }}>
-                <Type />
+                <Type datatoShow={datatoShow}/>
               </div>
             </Col>
 
@@ -53,7 +56,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2  />
+      <Home2  datatoShow={datatoShow}/>
     </section>
   );
 }

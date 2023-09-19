@@ -23,12 +23,20 @@ function App() {
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
+
+    const country = localStorage.getItem('country')
+    if(!country){
+      localStorage.setItem('country','US')
+    }
+    
     const timer = setTimeout(() => {
       upadateLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
+
+
 
   return (
     <ThemeProvider>

@@ -7,11 +7,16 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import {useTheme} from "../themetype";
+import { translation } from "../translation";
+
+
 
 function About() {
     const { nightMode } = useTheme();
+    const datatoShow = translation()
 
-  return (
+
+    return (
     <Container fluid className="about-section" style={{zIndex:'99999', color:!nightMode&&'black', backgroundImage:'none', backgroundColor:!nightMode&&'white',   }}>
       <Particle />
       <Container style={{ color:!nightMode&&'black',  }}>
@@ -25,9 +30,9 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" , color:!nightMode&&'black', }}>
-              Know Who <strong className="purple">I Am</strong>
+              {datatoShow.about1} <strong className="purple">{datatoShow.about2}</strong>
             </h1>
-            <Aboutcard />
+            <Aboutcard datatoShow={datatoShow}  />
           </Col>
           <Col
             md={5}
@@ -38,17 +43,17 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading" style={{color:!nightMode&&'black', }}>
-          Professional <strong className="purple">Skillset </strong>
+        {datatoShow.about16} <strong className="purple">{datatoShow.about17} </strong>
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading" style={{color:!nightMode&&'black', }}>
-          <strong className="purple">Tools</strong> I use
+          <strong className="purple">{datatoShow.about18}</strong> {datatoShow.about19}
         </h1>
         <Toolstack />
 
-        <Github />
+        <Github datatoShow={datatoShow}/>
       </Container>
     </Container>
   );

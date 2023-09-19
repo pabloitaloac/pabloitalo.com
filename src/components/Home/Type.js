@@ -1,13 +1,13 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-function Type() {
+function Type(props) {
   return (
     <Typewriter
     
       options={{
         strings: [
-          "Senior Full Stack Developer",
+          props.datatoShow.home3,
           "React + React Native",
           "Node",
           "MongoDB",

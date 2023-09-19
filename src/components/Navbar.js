@@ -26,6 +26,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { translation } from "./translation";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -86,12 +87,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 
 function NavBar() {
+  const datatoShow = translation()
+
   const width = window.screen.width
   const navigate = useNavigate()
   const {nightMode,toggleTheme}=useTheme()
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
-  const [selected, setSelected] = useState("US");
+  const [selected, setSelected] = useState(localStorage.getItem('country')||'US');
 
 
   function scrollHandler() {
@@ -137,7 +140,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home" style={{display:'flex', alignItems:'center', justifyContent:'right',  }}>
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {datatoShow.navbar1}
               </Nav.Link>
             </Nav.Item>
 
@@ -147,7 +150,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {datatoShow.navbar2}
               </Nav.Link>
             </Nav.Item>
 
@@ -160,7 +163,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                {datatoShow.navbar3}
               </Nav.Link>
             </Nav.Item>
 
@@ -170,7 +173,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {datatoShow.navbar4}
               </Nav.Link>
             </Nav.Item>
 
@@ -197,11 +200,10 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item style={{display:'flex',marginTop:width<700&&'10px'}}>
             <ReactFlagsSelect
-              countries={["US", "BR", "JP"]}
-              disabled
-              customLabels={{"US": "English","BR": "Português","JP": "日本人"}} 
+              countries={["US", "BR", ]}
+              customLabels={{"US": "English","BR": "Português", "ES":"Español", "JP": "日本人"}} 
               selected={selected}
-              onSelect={(code) => setSelected(code)}
+              onSelect={(code) => {setSelected(code); localStorage.setItem('country',code); window.location.reload()}}
               className="menu-flags"
               selectButtonClassName="menu-flags-button"
 

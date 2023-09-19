@@ -12,9 +12,11 @@ import docstree from "../../Assets/Projects/docs-tree.png";
 import hewantsbarber from "../../Assets/Projects/hewantsbarber.png";
 import reboucasofficial from "../../Assets/Projects/reboucasofficial.png";
 import {useTheme} from "../themetype";
+import { translation } from "../translation";
 
 function Projects() {
   const { nightMode } = useTheme();
+  const datatoShow = translation()
 
   return (
     <Container fluid className="project-section"      
@@ -33,18 +35,18 @@ function Projects() {
         }}
       >
         <h1 className="project-heading" style={{color:!nightMode&&'black'}}>
-          My Recent <strong className="purple">Works </strong>
+          {datatoShow.projects1} <strong className="purple">{datatoShow.projects2} </strong>
         </h1>
         <p style={{ color:!nightMode?'black':'white' }}>
-          Here are a few projects I've worked on recently.
+        {datatoShow.projects3}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={docstree}
               isBlog={false}
-              title="Docs-Tree"
-              description="international platform for searching documents and freelance jobs."
+              title={datatoShow.projects_show1}
+              description={datatoShow.projects_show1_1}
               ghLink=""
               demoLink="https://docs-tree.com/"
             />
@@ -53,8 +55,8 @@ function Projects() {
             <ProjectCard
               imgPath={reboucasofficial}
               isBlog={false}
-              title="Rebouças University"
-              description="Institutional platform for presenting courses, sales, etc..."
+              title={datatoShow.projects_show2}
+              description={datatoShow.projects_show2_2}
               ghLink=""
               demoLink="#"
             />
@@ -63,8 +65,8 @@ function Projects() {
             <ProjectCard
               imgPath={hewantsbarber}
               isBlog={false}
-              title="He Wants Barber"
-              description="Complete dashboard to sales, registration, set service dates, etc..."
+              title={datatoShow.projects_show3}
+              description={datatoShow.projects_show3_3}
               ghLink=""
               demoLink="#"
             />
