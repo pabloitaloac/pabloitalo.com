@@ -4,6 +4,8 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import work_animation from "../../Assets/work_animation.json";
+import Lottie from "lottie-react";
 
 
   import {useTheme} from "../themetype";
@@ -43,12 +45,17 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
+              {/* <img
+                src={animation1}
                 alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
-              />
+              /> */}
+
+                <Lottie animationData={work_animation} loop={true} />
+
+
+
             </Col>
           </Row>
         </Container>

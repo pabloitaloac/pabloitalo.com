@@ -7,18 +7,28 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import {useTheme} from "../themetype";
 
+
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+const pdfUrl = "https://pabloitalo.com/resume.pdf";
 
 const totalpages = [{singlepage:1},{singlepage:2},{singlepage:3},]
 function ResumeNew() {
-  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
+  const {nightMode,datatoShow}=useTheme()
+
 
   const [width, setWidth] = useState(1200);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
+
+  const isMobile = window.screen.width<720
+
+  useEffect(() => {
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+  }, []);
+
+
 
   return (
     <div          style={{
@@ -36,7 +46,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href='https://pabloitalo.com/resume.pdf'
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -45,22 +55,31 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume" style={{gap:'10px'}}>
-          {totalpages && totalpages.map((single)=>{
-            if(single.singlepage){
-              return(
-                <Document file={pdf} className="d-flex justify-content-center " key={single.singlepage}>
-                  <Page pageNumber={single.singlepage} scale={width > 786 ? 1.7 : 0.6}  />
-                </Document>
-            )
-          }
-          })}
-        </Row>
+        {/* <Row className="resume" style={{gap:'10px'}}> */}
+        <div style={{display:'flex', flexDirection:isMobile?'column':'row',  margin:"20px auto 20px auto", justifyContent:'center',  width:isMobile?'80%':'100%', height:isMobile?'400px':'700px', overflowY:'auto', zIndex:'9999', gap:'20px'}}>
+        {totalpages &&
+            totalpages.map((single) => {
+              if (single.singlepage) {
+                return (
+                  <div key={single.singlepage}>
+                    <Document file={pdfUrl}  >
+                      <Page
+                        pageNumber={single.singlepage}
+                        width={isMobile?width * 0.7 : width/3.2}
+                      />
+                    </Document>
+                  </div>
+                );
+              }
+              return null;
+            })}
+        </div>
+        {/* </Row>;z */}
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href='https://pabloitalo.com/resume.pdf'
             target="_blank"
             style={{ maxWidth: "250px" }}
           >

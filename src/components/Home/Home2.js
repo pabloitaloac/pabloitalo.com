@@ -9,6 +9,8 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import {useTheme} from "../themetype";
+import avatar_animation from "../../Assets/avatar_animation.json";
+import Lottie from "lottie-react";
 
 function Home2(props) {
   const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
@@ -40,7 +42,9 @@ function Home2(props) {
 </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <Lottie animationData={avatar_animation} loop={true} />
+
+              {/* <img src={myImg} className="img-fluid" alt="avatar" /> */}
             </Tilt>
           </Col>
         </Row>

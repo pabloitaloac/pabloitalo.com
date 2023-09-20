@@ -401,11 +401,11 @@ button:focus {
 .menu-flags{
   margin: auto;
 }
-.menu-flags-button{
+.menu-flags button{
   background-color: white;
   cursor: pointer;
 }
-.menu-flags-button:disabled{
+.menu-flags button:disabled{
   background-color: rgb(255, 255, 255);
   cursor:no-drop;
 }

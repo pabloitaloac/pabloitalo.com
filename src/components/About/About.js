@@ -7,6 +7,8 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import {useTheme} from "../themetype";
+import Lottie from "lottie-react";
+import development_animation from "../../Assets/development_animation.json";
 
 
 
@@ -34,10 +36,14 @@ function About() {
           </Col>
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            // style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <div className="img-fluid" style={{display:'flex', alignItems:'center', justifyContent:'center', }}>
+              <Lottie animationData={development_animation} loop={true}  />
+            </div>
+
+            {/* <img src={laptopImg} alt="about" className="img-fluid" /> */}
           </Col>
         </Row>
         <h1 className="project-heading" style={{color:!nightMode&&'black', }}>
