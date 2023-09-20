@@ -7,14 +7,12 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import {useTheme} from "../themetype";
-import { translation } from "../translation";
 
 
 
 function About() {
-    const { nightMode } = useTheme();
-    const datatoShow = translation()
-
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
+  
 
     return (
     <Container fluid className="about-section" style={{zIndex:'99999', color:!nightMode&&'black', backgroundImage:'none', backgroundColor:!nightMode&&'white',   }}>

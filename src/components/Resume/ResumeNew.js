@@ -6,15 +6,13 @@ import pdf from "../../Assets/../Assets/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import {useTheme} from "../themetype";
-import { translation } from "../translation";
 
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const totalpages = [{singlepage:1},{singlepage:2},{singlepage:3},]
 function ResumeNew() {
-  const { nightMode } = useTheme();
-  const datatoShow = translation()
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   const [width, setWidth] = useState(1200);
 

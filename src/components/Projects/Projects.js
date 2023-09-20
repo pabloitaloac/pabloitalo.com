@@ -12,11 +12,9 @@ import docstree from "../../Assets/Projects/docs-tree.png";
 import hewantsbarber from "../../Assets/Projects/hewantsbarber.png";
 import reboucasofficial from "../../Assets/Projects/reboucasofficial.png";
 import {useTheme} from "../themetype";
-import { translation } from "../translation";
 
 function Projects() {
-  const { nightMode } = useTheme();
-  const datatoShow = translation()
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   return (
     <Container fluid className="project-section"      
@@ -41,14 +39,35 @@ function Projects() {
         {datatoShow.projects3}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
+          {/* <Col md={4} className="project-card"> */}
+
+            {
+              datatoShow.projects && datatoShow.projects.map((singleProject,index)=>{
+                return(
+                  <Col md={4} className="project-card" key={index}>
+                    <ProjectCard
+                      imgPath={singleProject.projects_image}
+                      isBlog={false}
+                      title={singleProject.projects_show}
+                      description={singleProject.projects_show_1}
+                      ghLink={singleProject.projects_show_ghLink}
+                      demoLink={singleProject.projects_show_demoLink}
+                      LiveLink={singleProject.projects_show_LiveLink}
+                      highlight={singleProject.highlight}
+                    />    
+                  </Col>
+                )
+              })
+            }
+            {/* <ProjectCard
               imgPath={docstree}
               isBlog={false}
               title={datatoShow.projects_show1}
               description={datatoShow.projects_show1_1}
-              ghLink=""
-              demoLink="https://docs-tree.com/"
+              ghLink={datatoShow.projects_show_1_ghLink}
+              demoLink={datatoShow.projects_show_1_demoLink}
+              LiveLink={datatoShow.projects_show_1_LiveLink}
+
             />
           </Col>
           <Col md={4} className="project-card">
@@ -57,8 +76,10 @@ function Projects() {
               isBlog={false}
               title={datatoShow.projects_show2}
               description={datatoShow.projects_show2_2}
-              ghLink=""
-              demoLink="#"
+              ghLink={datatoShow.projects_show_2_ghLink}
+              demoLink={datatoShow.projects_show_2_demoLink}
+              LiveLink={datatoShow.projects_show_2_LiveLink}
+
             />
           </Col>
           <Col md={4} className="project-card">
@@ -67,10 +88,23 @@ function Projects() {
               isBlog={false}
               title={datatoShow.projects_show3}
               description={datatoShow.projects_show3_3}
-              ghLink=""
-              demoLink="#"
+              ghLink={datatoShow.projects_show_3_ghLink}
+              demoLink={datatoShow.projects_show_3_demoLink}
+              LiveLink={datatoShow.projects_show_3_LiveLink}
+
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hewantsbarber}
+              isBlog={false}
+              title={datatoShow.projects_show4}
+              description={datatoShow.projects_show4_4}
+              ghLink={datatoShow.projects_show_4_ghLink}
+              demoLink={datatoShow.projects_show_4_demoLink}
+              LiveLink={datatoShow.projects_show_4_LiveLink}
+            />
+          </Col> */}
 
 
           {/* <Col md={4} className="project-card">

@@ -26,7 +26,6 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { translation } from "./translation";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -87,11 +86,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 
 function NavBar() {
-  const datatoShow = translation()
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   const width = window.screen.width
   const navigate = useNavigate()
-  const {nightMode,toggleTheme}=useTheme()
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const [selected, setSelected] = useState(localStorage.getItem('country')||'US');
@@ -118,7 +116,7 @@ function NavBar() {
       <Container>
 
 
-        <Navbar.Brand  className="d-flex" onClick={()=>{navigate('/')}}>
+        <Navbar.Brand  className="d-flex" onClick={()=>{window.scrollTo(0, 0);navigate('/')}}>
           <img src={logo}  
           alt="brand" 
           style={{maxWidth: "120px", cursor:'pointer'}}
@@ -203,7 +201,7 @@ function NavBar() {
               countries={["US", "BR", ]}
               customLabels={{"US": "English","BR": "Português", "ES":"Español", "JP": "日本人"}} 
               selected={selected}
-              onSelect={(code) => {setSelected(code); localStorage.setItem('country',code); window.location.reload()}}
+              onSelect={(code) => {setSelected(code); toggletranslation(code);  }}
               className="menu-flags"
               selectButtonClassName="menu-flags-button"
 

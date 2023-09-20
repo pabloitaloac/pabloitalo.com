@@ -4,15 +4,12 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import { translation } from "../translation";
 
 
   import {useTheme} from "../themetype";
 
 function Home() {
-        const { nightMode } = useTheme();
-
-        const datatoShow = translation()
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   return (
     <section 

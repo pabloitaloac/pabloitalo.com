@@ -4,7 +4,7 @@ import { Row } from "react-bootstrap";
 import {useTheme} from "../themetype";
 
 function Github(props) {
-  const { nightMode } = useTheme();
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px", color:!nightMode&&'black', }}>

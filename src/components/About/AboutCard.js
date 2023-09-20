@@ -4,7 +4,7 @@ import { ImPointRight } from "react-icons/im";
 import {useTheme} from "../themetype";
 
 function AboutCard(props) {
-  const { nightMode } = useTheme();
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   return (
 <Card className="quote-card-view" style={{color:!nightMode&&'black', }}>

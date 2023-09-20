@@ -11,7 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import {useTheme} from "../themetype";
 
 function Home2(props) {
-  const { nightMode } = useTheme();
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   return (
     <Container fluid className="home-about-section" id="about" style={{marginTop:-200, color:!nightMode&&'black', }}>

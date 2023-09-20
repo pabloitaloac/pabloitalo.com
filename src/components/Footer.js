@@ -7,11 +7,9 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import  {useTheme} from "./themetype";
-import { translation } from "./translation";
 
 function Footer() {
-  const {nightMode,toggleTheme}=useTheme()
-  const datatoShow = translation()
+  const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
 
   let date = new Date();
   let year = date.getFullYear();
