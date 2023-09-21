@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
@@ -12,9 +13,15 @@ import docstree from "../../Assets/Projects/docs-tree.png";
 import hewantsbarber from "../../Assets/Projects/hewantsbarber.png";
 import reboucasofficial from "../../Assets/Projects/reboucasofficial.png";
 import {useTheme} from "../themetype";
+import { loading } from "../Loading/Loading";
+
+
 
 function Projects() {
   const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
+  useEffect(() => {
+    loading()
+  }, []); 
 
   return (
     <Container fluid className="project-section"      

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -18,7 +18,7 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import ReactFlagsSelect from "react-flags-select";
-
+import { loading } from "./Loading/Loading";
 
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
@@ -87,6 +87,9 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 function NavBar() {
   const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
+  useEffect(() => {
+    loading()
+  }, []); 
 
   const width = window.screen.width
   const navigate = useNavigate()
@@ -107,16 +110,17 @@ function NavBar() {
 
   return (
     <Navbar
+      id="navbar"
       expanded={expand}
       fixed="top"
       expand="md"
       className={navColour ? "sticky" : "navbar"}
-      style={{backgroundColor:!nightMode&&'black', zIndex:'999999999999'}}
+      style={{backgroundColor:!nightMode&&'black', zIndex:'99999999'}}
     >
       <Container>
 
 
-        <Navbar.Brand  className="d-flex" onClick={()=>{window.scrollTo(0, 0);navigate('/')}}>
+        <Navbar.Brand  className="d-flex" onClick={()=>{loading();window.scrollTo(0, 0);navigate('/')}}>
           <img src={logo}  
           alt="brand" 
           style={{maxWidth: "120px", cursor:'pointer'}}
@@ -137,7 +141,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home" style={{display:'flex', alignItems:'center', justifyContent:'right',  }}>
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link as={Link} to="/" onClick={() => {loading();updateExpanded(false)}}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> {datatoShow.navbar1}
               </Nav.Link>
             </Nav.Item>
@@ -146,7 +150,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/about"
-                onClick={() => updateExpanded(false)}
+                onClick={() => {loading();updateExpanded(false)}}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> {datatoShow.navbar2}
               </Nav.Link>
@@ -156,7 +160,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/project"
-                onClick={() => updateExpanded(false)}
+                onClick={() => {loading();updateExpanded(false)}}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -169,7 +173,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/resume"
-                onClick={() => updateExpanded(false)}
+                onClick={() => {loading();updateExpanded(false)}}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> {datatoShow.navbar4}
               </Nav.Link>
@@ -201,7 +205,7 @@ function NavBar() {
               countries={["US", "BR", ]}
               customLabels={{"US": "English","BR": "Português", "ES":"Español", "JP": "日本人"}} 
               selected={selected}
-              onSelect={(code) => {setSelected(code); toggletranslation(code);  }}
+              onSelect={(code) => {loading();setSelected(code); toggletranslation(code);  }}
               className="menu-flags"
               selectButtonClassName="menu-flags-button"
 
@@ -209,7 +213,7 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item style={{display:'flex',marginTop:width<700&&'10px'}}>
               <FormControlLabel
-                control={<MaterialUISwitch sx={{ m: 1 }} checked={nightMode} onClick={()=>{toggleTheme()}}  />}
+                control={<MaterialUISwitch sx={{ m: 1 }} checked={nightMode} onClick={()=>{loading();toggleTheme()}}  />}
                 style={{margin:'auto'}}
               />
             </Nav.Item>

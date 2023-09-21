@@ -9,12 +9,15 @@ import Toolstack from "./Toolstack";
 import {useTheme} from "../themetype";
 import Lottie from "lottie-react";
 import development_animation from "../../Assets/development_animation.json";
-
-
+import { useEffect } from "react";
+import { loading } from "../Loading/Loading";
 
 function About() {
   const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
-  
+  useEffect(() => {
+    loading()
+  }, []); 
+
 
     return (
     <Container fluid className="about-section" style={{zIndex:'99999', color:!nightMode&&'black', backgroundImage:'none', backgroundColor:!nightMode&&'white',   }}>

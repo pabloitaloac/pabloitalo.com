@@ -6,12 +6,15 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import work_animation from "../../Assets/work_animation.json";
 import Lottie from "lottie-react";
-
+import { loading } from "../Loading/Loading";
 
   import {useTheme} from "../themetype";
 
 function Home() {
   const {nightMode,toggleTheme,datatoShow, toggletranslation}=useTheme()
+  useEffect(() => {
+    loading()
+  }, []); 
 
   return (
     <section 

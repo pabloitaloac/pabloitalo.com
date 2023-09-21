@@ -6,7 +6,7 @@ import pdf from "../../Assets/../Assets/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import {useTheme} from "../themetype";
-
+import { loading } from "../Loading/Loading";
 
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 const pdfUrl = "https://pabloitalo.com/resume.pdf";
@@ -14,6 +14,9 @@ const pdfUrl = "https://pabloitalo.com/resume.pdf";
 const totalpages = [{singlepage:1},{singlepage:2},{singlepage:3},]
 function ResumeNew() {
   const {nightMode,datatoShow}=useTheme()
+  useEffect(() => {
+    loading()
+  }, []); 
 
 
   const [width, setWidth] = useState(1200);
