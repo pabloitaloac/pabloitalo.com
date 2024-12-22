@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  pabloitalo_frontend_prod:
+    environment:
+      - AUTH_URL_INTERNAL=${AUTH_URL_INTERNAL}
+      - AUTH_SECRET=${AUTH_SECRET}
+      - PORT=6100
+    user: node
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: pabloitalo_frontend_prod
+    ports:
+      - "6100:6100"
+    restart: always
+    networks:
+      - network_pabloitalo_prod
+
+networks:
+  network_pabloitalo_prod:
+    external: true
