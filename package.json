@@ -1,6 +1,6 @@
 {
-  "name": "developer-portfolio",
-  "version": "0.1.0",
+  "name": "pabloitalo",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@dotlottie/player-component": "^2.6.0",

@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import {useTheme} from "../themetype";
 import { loading } from "../Loading/Loading";
+import pdf from "../../Assets/../Assets/resume.pdf";
 
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-const pdfUrl = "https://pabloitalo.com/resume.pdf";
 
 const totalpages = [{singlepage:1},{singlepage:2},{singlepage:3},]
 function ResumeNew() {
@@ -49,7 +48,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href='https://pabloitalo.com/resume.pdf'
+            href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -65,7 +64,8 @@ function ResumeNew() {
               if (single.singlepage) {
                 return (
                   <div key={single.singlepage}>
-                    <Document file={pdfUrl}  >
+                    {/* <Document file={pdfUrl}  > */}
+                    <Document file={pdf}  >
                       <Page
                         pageNumber={single.singlepage}
                         width={isMobile?width * 0.7 : width/3.2}
@@ -82,7 +82,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href='https://pabloitalo.com/resume.pdf'
+            href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
