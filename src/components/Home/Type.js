@@ -8,15 +8,20 @@ function Type(props) {
       options={{
         strings: [
           props.datatoShow.home3,
-          "React + React Native",
-          "Node",
-          "MongoDB",
-          "Express",
+          "Next.js + Nest.js + React + React Native",
+          "Node.js + Express + TypeScript + JavaScript",
+          "Python + Django",
+          "PHP + WordPress",
+          "PostgreSQL + MongoDB + Redis",
+          "HTML5 + CSS3 + Tailwind CSS + Sass + Bootstrap",
+          "AWS + Google Cloud Platform + Heroku + Firebase",
+          "iOS + Android + Xcode + Android Studio",
+          "GitHub + Docker",
         ],
         autoStart: true,
         loop: true,
         deleteSpeed: 5,
-        delay:50,
+        delay:20,
         
       }}
     />

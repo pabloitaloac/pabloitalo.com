@@ -13,7 +13,31 @@ function ProjectCards(props) {
 
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" style={{height:'50%',padding:'0px'}}/>
+      <Card.Img variant="top" src={props.imgPath} alt="card-img" 
+        style={
+          nightMode?
+          {
+            height:'50%',
+            width:'90%',
+            margin:'0 auto',
+            padding:'0px',
+            objectFit:'cover',
+            objectPosition:'center',
+            boxShadow:'0 10px 15px rgb(255, 255, 255, 0.4)',
+            borderRadius:'10px',    
+          }
+          :
+          {
+            height:'50%',
+            width:'90%',
+            margin:'0 auto',
+            padding:'0px',
+            objectFit:'cover',
+            objectPosition:'center',
+            boxShadow:'0 10px 15px rgba(0, 0, 0, 0.1)',
+            borderRadius:'10px',    
+          }
+        }/>
       <Card.Body style={{color:!nightMode&&'black',  display:'flex', flexDirection:'column', gap:'10px'}}>
         
         <Card.Title style={{fontSize:'20px',  position:'relative', top:'0px', fontWeight:'bold', display:'flex', gap:'10px', alignItems:'center', justifyContent:'center',  }} className="purple">{props.highlight&&<img src={star} width='30px' />}{props.title}</Card.Title>
