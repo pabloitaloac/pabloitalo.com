@@ -10,7 +10,7 @@ import pdf from "../../Assets/../Assets/resume.pdf";
 
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
-const totalpages = [{singlepage:1},{singlepage:2},{singlepage:3},]
+const totalpages = [{singlepage:1},{singlepage:2}]
 function ResumeNew() {
   const {nightMode,datatoShow}=useTheme()
   useEffect(() => {
@@ -58,12 +58,12 @@ function ResumeNew() {
         </Row>
 
         {/* <Row className="resume" style={{gap:'10px'}}> */}
-        <div style={{display:'flex', flexDirection:isMobile?'column':'row',  margin:"20px auto 20px auto", justifyContent:'center',  width:isMobile?'80%':'100%', height:isMobile?'400px':'700px', overflowY:'auto', zIndex:'9999', gap:'20px'}}>
+        <div style={{display:'flex', flexDirection:isMobile?'column':'row',  margin:"20px auto 20px auto", justifyContent:'center',  width:'80%',  zIndex:'9999', gap:'20px'}}>
         {totalpages &&
             totalpages.map((single) => {
               if (single.singlepage) {
                 return (
-                  <div key={single.singlepage}>
+                  <div key={single.singlepage} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100%', height:'100%'}}>
                     {/* <Document file={pdfUrl}  > */}
                     <Document file={pdf}  >
                       <Page

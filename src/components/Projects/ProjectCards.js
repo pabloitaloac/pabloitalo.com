@@ -38,7 +38,7 @@ function ProjectCards(props) {
             borderRadius:'10px',    
           }
         }/>
-      <Card.Body style={{color:!nightMode&&'black',  display:'flex', flexDirection:'column', gap:'10px'}}>
+      <Card.Body style={{color:!nightMode&&'black',  display:'flex', flexDirection:'column', gap:'10px', }}>
         
         <Card.Title style={{fontSize:'20px',  position:'relative', top:'0px', fontWeight:'bold', display:'flex', gap:'10px', alignItems:'center', justifyContent:'center',  }} className="purple">{props.highlight&&<img src={star} width='30px' />}{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
