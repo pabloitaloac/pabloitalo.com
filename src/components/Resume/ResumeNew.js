@@ -58,7 +58,7 @@ function ResumeNew() {
         </Row>
 
         {/* <Row className="resume" style={{gap:'10px'}}> */}
-        <div style={{display:'flex', flexDirection:isMobile?'column':'row',  margin:"20px auto 20px auto", justifyContent:'center',  width:'80%',  zIndex:'9999', gap:'20px'}}>
+        <div style={{display:'flex', flexDirection:isMobile?'column':'row',  margin:"20px auto 20px auto", justifyContent:'center',  width:'80%', gap:'20px'}}>
         {totalpages &&
             totalpages.map((single) => {
               if (single.singlepage) {

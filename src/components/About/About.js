@@ -20,7 +20,7 @@ function About() {
 
 
     return (
-    <Container fluid className="about-section" style={{zIndex:'99999', color:!nightMode&&'black', backgroundImage:'none', backgroundColor:!nightMode&&'white',   }}>
+    <Container fluid className="about-section" style={{color:!nightMode&&'black', backgroundImage:'none', backgroundColor:!nightMode&&'white',   }}>
       <Particle />
       <Container style={{ color:!nightMode&&'black',  }}>
         <Row style={{ justifyContent: "center", padding: "10px", color:!nightMode&&'black',  }}>

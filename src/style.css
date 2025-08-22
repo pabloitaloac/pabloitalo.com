@@ -80,6 +80,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
+  z-index: 10;
 }
 
 .navbar {
@@ -87,6 +88,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  z-index: 10;
 }
 
 .navbar-toggler {
@@ -248,6 +250,7 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  z-index: 1 !important;
 }
 
 .home-header {
@@ -256,7 +259,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 2;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -268,6 +271,8 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+  position: relative;
+  z-index: 3;
 }
 
 .heading {
@@ -321,6 +326,7 @@ button:focus {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
+  z-index: 2;
 }
 
 .home-about-description {
@@ -348,6 +354,7 @@ button:focus {
   display: inline-block !important;
   position: relative !important;
   padding-inline-start: 0 !important;
+  z-index: 3;
 }
 
 .home-social-icons {
@@ -361,6 +368,7 @@ button:focus {
   background: rgba(255, 255, 255, 0.972) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
+  z-index: 4;
 }
 
 .home-social-icons::before {
@@ -398,6 +406,35 @@ button:focus {
   color: #700c86 !important;
 }
 
+/* Social media icon specific colors */
+.github-icon {
+  color: #ffffff !important;
+}
+
+.twitter-icon {
+  color: #ffffff !important;
+}
+
+.linkedin-icon {
+  color: #ffffff !important;
+}
+
+/* Hover effects for social icons */
+.github-icon:hover {
+  color: #ffffff !important;
+  box-shadow: 0 0 5px #ffffff !important;
+}
+
+.twitter-icon:hover {
+  color: #ffffff !important;
+  box-shadow: 0 0 5px #ffffff !important;
+}
+
+.linkedin-icon:hover {
+  color: #ffffff !important;
+  box-shadow: 0 0 5px #ffffff !important;
+}
+
 .menu-flags{
   margin: auto;
 }
@@ -418,13 +455,15 @@ button:focus {
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
+  position: relative;
+  z-index: 2;
 }
 .footer-copywright {
   text-align: center !important;
 }
 
 .footer-body {
-  z-index: 1;
+  z-index: 3;
   text-align: center !important;
 }
 
@@ -452,6 +491,8 @@ button:focus {
 
 .blockquote-footer {
   color: #a588c0 !important;
+  position: relative;
+  z-index: 4;
 }
 /* --------- */
 /* Projects */
@@ -461,6 +502,7 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) ;
+  z-index: 2;
 }
 
 .project-card {
@@ -478,6 +520,8 @@ button:focus {
   /* opacity: 0.9 !important; */
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  position: relative;
+  z-index: 3;
 }
 .project-card-view:hover {
   transform: scale(1.02) !important;
@@ -548,6 +592,8 @@ button:focus {
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
+  position: relative;
+  z-index: 3;
 }
 
 /* --------- */
@@ -560,6 +606,12 @@ button:focus {
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) ;
   color: white !important;
+  z-index: 2;
+}
+
+.about-section h1 {
+  position: relative;
+  z-index: 3;
 }
 
 .tech-icons {
@@ -575,6 +627,8 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  position: relative;
+  z-index: 3;
 }
 
 @media (max-width: 767px) {
@@ -597,12 +651,16 @@ button:focus {
   border: none !important;
   color: white !important;
   background-color: transparent !important;
+  position: relative;
+  z-index: 3;
 }
 
 .about-activity {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
+  position: relative;
+  z-index: 4;
 }
 
 @media (max-width: 767px) {
@@ -620,12 +678,15 @@ button:focus {
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) ;
   color: white !important;
+  z-index: 2;
 }
 
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
   justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
 .resume-left {
@@ -659,6 +720,7 @@ button:focus {
   margin-top: -2px;
   border-left: 2px solid #8a49a8;
   position: relative;
+  z-index: 4;
 }
 
 .resume .resume-item .resume-title {
@@ -669,6 +731,8 @@ button:focus {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 4;
 }
 
 .resume .resume-item ul {
@@ -679,6 +743,8 @@ button:focus {
 .resume .resume-item ul li {
   padding-bottom: 10px;
   list-style: none;
+  position: relative;
+  z-index: 4;
 }
 
 .resume .resume-item:last-child {
@@ -714,6 +780,8 @@ button:focus {
   border-radius: 5px !important;
   line-height: 1.4 !important;
   transition: 0.3s ease !important;
+  position: relative;
+  z-index: 5;
 }
 
 .like-btn:hover {
@@ -746,6 +814,8 @@ button:focus {
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
+  position: relative;
+  z-index: 5;
 }
 
 .fork-btn-inner:hover {
@@ -755,4 +825,35 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* Resume page specific styles */
+.resume-section .btn {
+  position: relative;
+  z-index: 5;
+}
+
+.resume-section .react-pdf__Document {
+  position: relative;
+  z-index: 3;
+}
+
+.resume-section .react-pdf__Page {
+  position: relative;
+  z-index: 3;
+}
+
+.resume-section .react-pdf__Page__canvas {
+  position: relative;
+  z-index: 3;
+}
+
+.resume-section .react-pdf__Page__textContent {
+  position: relative;
+  z-index: 3;
+}
+
+.resume-section .react-pdf__Page__annotations {
+  position: relative;
+  z-index: 3;
 }

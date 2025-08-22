@@ -23,7 +23,7 @@ function Home2(props) {
   <h1 style={{ fontSize: "2.6em", color:!nightMode&&'black',  textTransform:'uppercase'}}>
     {props.datatoShow.home4} <span className="purple">{props.datatoShow.home5}</span> {props.datatoShow.home6}
   </h1>
-  <p className="home-about-body" style={{zIndex:'9999', color:!nightMode&&'black', }}>
+  <p className="home-about-body" style={{color:!nightMode&&'black', }}>
   {props.datatoShow.home7}
     <br />
     <br />
@@ -50,52 +50,42 @@ function Home2(props) {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1 style={{zIndex:'9999', color:!nightMode&&'black', }}>{props.datatoShow.home13}</h1>
-            <p style={{zIndex:'9999', color:!nightMode&&'black', }}>
+            <h1 style={{color:!nightMode&&'black', }}>{props.datatoShow.home13}</h1>
+            <p style={{color:!nightMode&&'black', }}>
             {props.datatoShow.home14} <span className="purple">{props.datatoShow.home15} </span>{props.datatoShow.home16}
             </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/pabloitaloac"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/pabloitaloac"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/pablo-italo/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/pabloitaloac"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
+                         <ul className="home-about-social-links">
+               <li className="social-icons">
+                 <a
+                   href="https://github.com/pabloitaloac"
+                   target="_blank"
+                   rel="noreferrer"
+                   className="home-social-icons github-icon"
+                 >
+                   <AiFillGithub />
+                 </a>
+               </li>
+               <li className="social-icons">
+                 <a
+                   href="https://twitter.com/pabloitaloac"
+                   target="_blank"
+                   rel="noreferrer"
+                   className="home-social-icons twitter-icon"
+                 >
+                   <AiOutlineTwitter />
+                 </a>
+               </li>
+               <li className="social-icons">
+                 <a
+                   href="https://www.linkedin.com/in/pablo-italo/"
+                   target="_blank"
+                   rel="noreferrer"
+                   className="home-social-icons linkedin-icon"
+                 >
+                   <FaLinkedinIn />
+                 </a>
+               </li>
+             </ul>
           </Col>
         </Row>
       </Container>

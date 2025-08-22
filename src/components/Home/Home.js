@@ -24,10 +24,10 @@ function Home() {
       }}
 
     >
-      <Container  className="home-section" id="home"  style={{zIndex:!nightMode&&'9999', color:!nightMode&&'black', backgroundImage:!nightMode&&'none',}}
+      <Container  className="home-section" id="home"  style={{color:!nightMode&&'black', backgroundImage:!nightMode&&'none',}}
       >
         <Particle />
-        <Container className="home-content" style={{zIndex:'9999', color:!nightMode&&'black', }}>
+        <Container className="home-content" style={{color:!nightMode&&'black', }}>
           <Row >
             <Col md={7} className="home-header" >
               <h1 style={{ paddingBottom: 15 ,  color:!nightMode&&'black',}} className="heading">
@@ -37,12 +37,12 @@ function Home() {
                 </span>
               </h1>
 
-              <h1 className="heading-name" style={{zIndex:'9999', color:!nightMode&&'black', }}>
+              <h1 className="heading-name" style={{color:!nightMode&&'black', }}>
               {datatoShow.home2}
-                <strong className="main-name" style={{zIndex:'9999', color:!nightMode&&'black', }}> PABLO ÍTALO</strong>
+                <strong className="main-name" style={{color:!nightMode&&'black', }}> PABLO ÍTALO</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" , zIndex:'9999', color:!nightMode&&'black', }}>
+              <div style={{ padding: 50, textAlign: "left" , color:!nightMode&&'black', }}>
                 <Type datatoShow={datatoShow}/>
               </div>
             </Col>
