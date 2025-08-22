@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
-import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
-import {useTheme} from "../themetype";
-import { loading } from "../Loading/Loading";
-import pdf from "../../Assets/../Assets/resume.pdf";
+import { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Particle from '../Particle';
+import { AiOutlineDownload } from 'react-icons/ai';
+import { Document, Page, pdfjs } from 'react-pdf';
+import { useTheme } from '../themetype';
+import { loading } from '../Loading/Loading';
+import pdf from '../../Assets/../Assets/resume.pdf';
 
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
-const totalpages = [{singlepage:1},{singlepage:2}]
+const totalpages = [{ singlepage: 1 }, { singlepage: 2 }];
 function ResumeNew() {
-  const {nightMode,datatoShow}=useTheme()
+  const { nightMode, datatoShow } = useTheme();
   useEffect(() => {
-    loading()
-  }, []); 
-
+    loading();
+  }, []);
 
   const [width, setWidth] = useState(1200);
 
@@ -24,33 +23,36 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
 
-  const isMobile = window.screen.width<720
+  const isMobile = window.screen.width < 720;
 
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
   }, []);
 
-
-
   return (
-    <div          style={{
-      backgroundColor:!nightMode&&'white', 
-      backgroundImage:!nightMode&&'none',
-      color:!nightMode&&'black'
+    <div
+      style={{
+        backgroundColor: !nightMode && 'white',
+        backgroundImage: !nightMode && 'none',
+        color: !nightMode && 'black',
       }}
->
-      <Container fluid className="resume-section" style={{
-      backgroundColor:!nightMode&&'white', 
-      backgroundImage:!nightMode&&'none',
-      color:!nightMode&&'black'
-      }}>
+    >
+      <Container
+        fluid
+        className='resume-section'
+        style={{
+          backgroundColor: !nightMode && 'white',
+          backgroundImage: !nightMode && 'none',
+          color: !nightMode && 'black',
+        }}
+      >
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row style={{ justifyContent: 'center', position: 'relative' }}>
           <Button
-            variant="primary"
+            variant='primary'
             href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
+            target='_blank'
+            style={{ maxWidth: '250px' }}
           >
             <AiOutlineDownload />
             &nbsp;{datatoShow.resume1}
@@ -58,17 +60,36 @@ function ResumeNew() {
         </Row>
 
         {/* <Row className="resume" style={{gap:'10px'}}> */}
-        <div style={{display:'flex', flexDirection:isMobile?'column':'row',  margin:"20px auto 20px auto", justifyContent:'center',  width:'80%', gap:'20px'}}>
-        {totalpages &&
-            totalpages.map((single) => {
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
+            margin: '20px auto 20px auto',
+            justifyContent: 'center',
+            width: '80%',
+            gap: '20px',
+          }}
+        >
+          {totalpages &&
+            totalpages.map(single => {
               if (single.singlepage) {
                 return (
-                  <div key={single.singlepage} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100%', height:'100%'}}>
+                  <div
+                    key={single.singlepage}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: '100%',
+                      height: '100%',
+                    }}
+                  >
                     {/* <Document file={pdfUrl}  > */}
-                    <Document file={pdf}  >
+                    <Document file={pdf}>
                       <Page
                         pageNumber={single.singlepage}
-                        width={isMobile?width * 0.7 : width/3.2}
+                        width={isMobile ? width * 0.7 : width / 3.2}
                       />
                     </Document>
                   </div>
@@ -79,12 +100,12 @@ function ResumeNew() {
         </div>
         {/* </Row>;z */}
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row style={{ justifyContent: 'center', position: 'relative' }}>
           <Button
-            variant="primary"
+            variant='primary'
             href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
+            target='_blank'
+            style={{ maxWidth: '250px' }}
           >
             <AiOutlineDownload />
             &nbsp;{datatoShow.resume1}

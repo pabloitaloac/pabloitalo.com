@@ -1,8 +1,3 @@
-import React, { useEffect, useState } from "react";
-import pre from '../../Assets/pre.svg'
-import logo from '../../Assets/logo.png'
-
-
 // function Loading(){
 //     useEffect(()=>{
 //         const navbar = document.getElementById('navbar')
@@ -15,12 +10,11 @@ import logo from '../../Assets/logo.png'
 //             <img src={logo} width='150px'   />
 //         </div>
 //     )
-// } 
-export function  loading(){
-    const loadelement = document.getElementById('loadelement')
-    loadelement.style.display = 'flex'
-    const timer = setTimeout(() => {
-        loadelement.style.display = 'none'
-    }, 1000);
-
-} 
+// }
+export function loading() {
+  const loadelement = document.getElementById('loadelement');
+  loadelement.style.display = 'flex';
+  setTimeout(() => {
+    loadelement.style.display = 'none';
+  }, 1000);
+}

@@ -1,308 +1,360 @@
-import docstree from "../../Assets/Projects/docs-tree.png";
-import aorforms from "../../Assets/Projects/aorforms.png";
-import iluy from "../../Assets/Projects/iluy.png";
-import hewantsbarber from "../../Assets/Projects/hewantsbarber.png";
-import reboucasofficial from "../../Assets/Projects/reboucasofficial.png";
-import araujocabral from "../../Assets/Projects/araujocabral.png";
-import pabloitalo from "../../Assets/Projects/pabloitalo.png";
-import personaltrainer from "../../Assets/Projects/personaltrainer.png";
-import shop from "../../Assets/Projects/shop.png";
-import eazyclock_dashboard from "../../Assets/Projects/eazyclock_dashboard.png";
-import elevateab from "../../Assets/Projects/elevateab.png";
-
-
+import docstree from '../../Assets/Projects/docs-tree.png';
+import aorforms from '../../Assets/Projects/aorforms.png';
+import iluy from '../../Assets/Projects/iluy.png';
+import hewantsbarber from '../../Assets/Projects/hewantsbarber.png';
+import reboucasofficial from '../../Assets/Projects/reboucasofficial.png';
+import araujocabral from '../../Assets/Projects/araujocabral.png';
+import pabloitalo from '../../Assets/Projects/pabloitalo.png';
+import shop from '../../Assets/Projects/shop.png';
+import eazyclock_dashboard from '../../Assets/Projects/eazyclock_dashboard.png';
+import elevateab from '../../Assets/Projects/elevateab.png';
 
 export const alldata = [
-    {
-        language:'US',
-  
-        navbar1:'Home',
-        navbar2:'About',
-        navbar3:'Projects',
-        navbar4:'Resume',
-  
-        footer1:'Pablo Ítalo, Senior Software Engineer | Fractional CTO | Tech Lead | AI Specialist',
-        footer2:`Copyright © 2018 - ${new Date().getFullYear()} Pablo Italo`,
-  
-        home1:'Hi There!',
-        home2:"I'M",
-        home3:"Senior Software Engineer | Fractional CTO | Tech Lead | AI Specialist",
-        home4:"LET ME",
-        home5:"INTRODUCE",
-        home6:"MYSELF",
-        home7:"Multilingual full-stack engineer with 6+ years of experience building high-impact web & mobile products. Fractional CTO and Tech Lead for startups, with proven ability to ship MVPs in 2-4 weeks and scale to 10k+ global users.",
-        home8:"I am proficient in modern languages and frameworks such as",
-        home9:"JavaScript, TypeScript, Python, Node.js, Next.js, NestJS, React, React Native, Django.",
-        home10:"Additionally, I specialize in AI/ML technologies including LangChain, OpenAI API, Vercel AI SDK, Vector DBs, and cloud platforms like AWS, Google Cloud, and Azure.",
-        home11:"My field of interest lies in developing innovative",
-        home12:"AI-powered SaaS platforms, LLM agents, and scalable web/mobile solutions.",
-        home13:"FIND ME ON",
-        home14:"Feel free to",
-        home15:"connect",
-        home16:"with me",
-  
-        about1:"Know Who",
-        about2:"I Am",
-        about3:"Hello everyone, I'm",
-        about4:"Pablo Ítalo",
-        about5:", a",
-        about6:"Senior Software Engineer | Fractional CTO | Tech Lead | AI Specialist",
-        about7:"I work with cutting-edge technologies, including",
-        about8:"JavaScript, TypeScript, Python, Next.js, NestJS, React, Django, LangChain, OpenAI API, AWS, and more.",
-        about9:"With 6+ years of experience, I specialize in",
-        about10:"AI-powered SaaS platforms, LLM agents, microservices architecture, and scalable web/mobile solutions. I've launched platforms to 10k+ users and >$200K ARR.",
-        about11:"Besides coding, there are a few other activities that I love to engage in!",
-        about12:"Building AI-powered startups",
-        about13:"Mentoring development teams",
-        about14:"Speaking at tech conferences",
-        about15:'"Always do your best!"',
-        about16:"Professional",
-        about17:"Skillset",
-        about18:"Tools",
-        about19:"I use",
-        about20:"Days I",
-        about21:"Code",
-  
-        projects:[
-            {
-                projects_image:iluy,
-                projects_show:"Iluy.ai - AI Specialist",
-                projects_show_1:"Multi-model AI chatbot platform. Built with Next.js + NestJS + LangChain + Vercel AI SDK. Delivered AI agent for deep research with 5k+ users and 90% match accuracy. Serverless architecture with <$100/month costs.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://iluy.ai/",
-                highlight:true,
-            },
-            {
-                projects_image:aorforms,
-                projects_show:"AorForms.com - Fractional CTO",
-                projects_show_1:"LegalTech SaaS platform built with Django + Next.js + PostgreSQL + AWS. Integrated AI verbal-signature agent with LangChain + OpenAI, reducing onboarding time by 65%. Scaled to 10k+ users with 99.9% uptime and $200K+ ARR.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://aorforms.com/",
-                highlight:true,
-            },
-            {
-                projects_image:eazyclock_dashboard,
-                projects_show:"EazyClock.com - Fractional CTO",
-                projects_show_1:"Appointment SaaS platform built with Next.js + NestJS + AWS. Features AI scheduler that boosted booking conversion by 22%. Grew to 10k+ users in 6 months with modern architecture.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://eazyclock.com/",
-                highlight:true,
-            },
-            {
-                projects_image:elevateab,
-                projects_show:"ElevateAB.com - Senior Full-Stack",
-                projects_show_1:"Modernized platform with Next.js + Django + Cloudflare Workers. Optimized workers to support 1,200+ tenants with <100ms latency. Re-architected e-commerce infrastructure supporting $1M+ revenue growth.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://elevateab.com/",
-                highlight:true,
-            },
-            {
-                projects_image:reboucasofficial,
-                projects_show:"Rebouças University - Tech Lead",
-                projects_show_1:"Complete institutional platform with test portal (React + Next.js + PHP/Laravel), main website with API integrations, and rebuilt student portal (Moodle + React + PHP). Implemented CI/CD reducing production defects by 50%.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://faculdadereboucas.com.br/",
-                highlight:true,
-            },
-            {
-                projects_image:docstree,
-                projects_show:"Docs-Tree",
-                projects_show_1:"International and scalable platform for searching documents and freelancers. Full-stack development with modern technologies for startup growth in the digital realm.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",
-                highlight:false,
-            },
-            {
-                projects_image:shop,
-                projects_show:"E-Commerce Solutions",
-                projects_show_1:"Multiple e-commerce projects with sales, promotions, shipping, marketing, gateway integrations. Migrated legacy systems to microservices, reducing deployments from days to hours.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",    
-                highlight:false,    
-            },
-            {
-                projects_image:hewantsbarber,
-                projects_show:"He Wants Barber",
-                projects_show_1:"Complete dashboard for sales, records, appointments, sales control. Built as part of 30+ projects delivered at Tecknow Solutions using various technologies including PHP, WordPress, TypeScript, Node, Docker.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",        
-            },
-            {
-                projects_image:pabloitalo,
-                projects_show:"Personal Portfolio",
-                projects_show_1:"Personal website showcasing full-stack development skills. Built with React and modern web technologies. Open source on GitHub.",
-                projects_show_ghLink:"https://github.com/pabloitaloac/pabloitalo.com",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://pabloitalo.com/",        
-            },
-            {
-                projects_image:araujocabral,
-                projects_show:"Legal Firm Website",
-                projects_show_1:"Institutional website for law firm showcasing areas of practice, locations, specialties, and team. Professional web development for legal sector growth and digital presence.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",        
-            },
-        ],
+  {
+    language: 'US',
 
+    navbar1: 'Home',
+    navbar2: 'About',
+    navbar3: 'Projects',
+    navbar4: 'Resume',
 
-        resume1:'Download CV',
-    },
-    {
-        language:'BR',
-  
-        navbar1:'Home',
-        navbar2:'Sobre mim',
-        navbar3:'Projetos',
-        navbar4:'Currículo',
-  
-        footer1:'Desenvolvido com ❤️ por Pablo Ítalo',
-        footer2:`Copyright © ${new Date().getFullYear()} Pablo Italo`,
-  
-        home1:'Olá!',
-        home2:"Meu nome é",
-        home3:"Engenheiro de Software Sênior | CTO Fracionário | Tech Lead | Especialista em IA",
-        home4:"Breve",
-        home5:"INTRODUÇÃO",
-        home6:"sobre mim",
-        home7:"Engenheiro full-stack multilíngue com 6+ anos de experiência construindo produtos web e mobile de alto impacto. CTO Fracionário e Tech Lead para startups, com capacidade comprovada de entregar MVPs em 2-4 semanas e escalar para 10k+ usuários globais.",
-        home8:"Tenho proficiência em linguagens e frameworks modernos, como",
-        home9:"JavaScript, TypeScript, Python, Node.js, Next.js, NestJS, React, React Native, Django.",
-        home10:"Além disso, me especializo em tecnologias de IA/ML incluindo LangChain, OpenAI API, Vercel AI SDK, Vector DBs, e plataformas cloud como AWS, Google Cloud, e Azure.",
-        home11:"Meu principal interesse é inovar e desenvolver",
-        home12:"plataformas SaaS alimentadas por IA, agentes LLM, e soluções web/mobile escaláveis.",
-        home13:"ME ENCONTRE EM",
-        home14:"Fique à vontade para se",
-        home15:"conectar",
-        home16:"comigo",
-  
-        about1:"Quem",
-        about2:"eu sou",
-        about3:"Olá, meu nome é",
-        about4:"Pablo Ítalo",
-        about5:", ",
-        about6:"Engenheiro de Software Sênior | CTO Fracionário | Tech Lead | Especialista em IA",
-        about7:"Trabalho com tecnologias de ponta, incluindo",
-        about8:"JavaScript, TypeScript, Python, Next.js, NestJS, React, Django, LangChain, OpenAI API, AWS, e mais.",
-        about9:"Com 6+ anos de experiência, me especializo em",
-        about10:"plataformas SaaS alimentadas por IA, agentes LLM, arquitetura de microserviços, e soluções web/mobile escaláveis. Lancei plataformas para 10k+ usuários e >$200K ARR.",
-        about11:"Além de codar, essas são outras atividades que eu amo fazer!",
-        about12:"Construir startups alimentadas por IA",
-        about13:"Mentorar equipes de desenvolvimento",
-        about14:"Palestrar em conferências de tecnologia",
-        about15:'"Sempre dê o seu melhor!"',
-        about16:"principais",
-        about17:"Habilidades profissionais",
-        about18:"Ferramentas",
-        about19:"que utilizo",
-        about20:"Dias que",
-        about21:"Codo",
-  
-        projects1:'Meus recentes',
-        projects2:'Trabalhos',
-        projects3:"Esses são alguns dos projetos que desenvolvi recentemente.",
+    footer1:
+      'Pablo Ítalo, Senior Software Engineer | Fractional CTO | Tech Lead | AI Specialist',
+    footer2: `Copyright © 2018 - ${new Date().getFullYear()} Pablo Italo`,
 
-        projects:[
-            {
-                projects_image:iluy,
-                projects_show:"Iluy.ai - Especialista em IA",
-                projects_show_1:"Plataforma de chatbot multi-modelo de IA. Construída com Next.js + NestJS + LangChain + Vercel AI SDK. Entregue agente de IA para pesquisa profunda com 5k+ usuários e 90% de precisão. Arquitetura serverless com custos <$100/mês.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://iluy.ai/",
-                highlight:true,
-            },
-            {
-                projects_image:aorforms,
-                projects_show:"AorForms.com - CTO Fracionário",
-                projects_show_1:"Plataforma SaaS LegalTech construída com Django + Next.js + PostgreSQL + AWS. Integrado agente de assinatura verbal com IA usando LangChain + OpenAI, reduzindo tempo de onboarding em 65%. Escalado para 10k+ usuários com 99.9% uptime e $200K+ ARR.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://aorforms.com/",
-                highlight:true,
-            },
-            {
-                projects_image:eazyclock_dashboard,
-                projects_show:"EazyClock.com - CTO Fracionário",
-                projects_show_1:"Plataforma SaaS de agendamentos construída com Next.js + NestJS + AWS. Possui agendador com IA que aumentou conversão de reservas em 22%. Cresceu para 10k+ usuários em 6 meses com arquitetura moderna.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://eazyclock.com/",
-                highlight:true,
-            },
-            {
-                projects_image:elevateab,
-                projects_show:"ElevateAB.com - Engenheiro Full-Stack Sênior",
-                projects_show_1:"Plataforma modernizada com Next.js + Django + Cloudflare Workers. Workers otimizados para suportar 1,200+ inquilinos com latência <100ms. Re-arquitetada infraestrutura de e-commerce suportando crescimento de receita de $1M+.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://elevateab.com/",
-                highlight:true,
-            },
-            {
-                projects_image:reboucasofficial,
-                projects_show:"Universidade Rebouças - Tech Lead",
-                projects_show_1:"Plataforma institucional completa com portal de testes (React + Next.js + PHP/Laravel), site principal com integrações de API, e portal do estudante reconstruído (Moodle + React + PHP). Implementado CI/CD reduzindo defeitos de produção em 50%.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://faculdadereboucas.com.br/",
-                highlight:true,
-            },
-            {
-                projects_image:docstree,
-                projects_show:"Docs-Tree",
-                projects_show_1:"Plataforma internacional e escalável para buscar documentos e freelancers. Desenvolvimento full-stack com tecnologias modernas para crescimento de startups no ambiente digital.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",
-                highlight:false,
-            },
-            {
-                projects_image:shop,
-                projects_show:"Soluções de E-Commerce",
-                projects_show_1:"Múltiplos projetos de e-commerce com vendas, promoções, fretes, marketing, integrações com gateway. Migração de sistemas legados para microserviços, reduzindo deploys de dias para horas.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",    
-                highlight:false,    
-            },
-            {
-                projects_image:hewantsbarber,
-                projects_show:"He Wants Barber",
-                projects_show_1:"Dashboard completa para vendas, registros, agendamentos, controle de vendas. Construído como parte de 30+ projetos entregues na Tecknow Solutions usando várias tecnologias incluindo PHP, WordPress, TypeScript, Node, Docker.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",        
-            },
-            {
-                projects_image:pabloitalo,
-                projects_show:"Portfólio Pessoal",
-                projects_show_1:"Site pessoal mostrando habilidades de desenvolvimento full-stack. Construído com React e tecnologias web modernas. Código aberto no GitHub.",
-                projects_show_ghLink:"https://github.com/pabloitaloac/pabloitalo.com",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"https://pabloitalo.com/",        
-            },
-            {
-                projects_image:araujocabral,
-                projects_show:"Site de Escritório de Advocacia",
-                projects_show_1:"Site institucional para escritório de advocacia mostrando áreas de atuação, localizações, especialidades e equipe. Desenvolvimento web profissional para crescimento e presença digital no setor jurídico.",
-                projects_show_ghLink:"",
-                projects_show_demoLink:"",
-                projects_show_LiveLink:"",        
-            },
-        ],
+    home1: 'Hi There!',
+    home2: "I'M",
+    home3:
+      'Senior Software Engineer | Fractional CTO | Tech Lead | AI Specialist',
+    home4: 'LET ME',
+    home5: 'INTRODUCE',
+    home6: 'MYSELF',
+    home7:
+      'Multilingual full-stack engineer with 6+ years of experience building high-impact web & mobile products. Fractional CTO and Tech Lead for startups, with proven ability to ship MVPs in 2-4 weeks and scale to 10k+ global users.',
+    home8: 'I am proficient in modern languages and frameworks such as',
+    home9:
+      'JavaScript, TypeScript, Python, Node.js, Next.js, NestJS, React, React Native, Django.',
+    home10:
+      'Additionally, I specialize in AI/ML technologies including LangChain, OpenAI API, Vercel AI SDK, Vector DBs, and cloud platforms like AWS, Google Cloud, and Azure.',
+    home11: 'My field of interest lies in developing innovative',
+    home12:
+      'AI-powered SaaS platforms, LLM agents, and scalable web/mobile solutions.',
+    home13: 'FIND ME ON',
+    home14: 'Feel free to',
+    home15: 'connect',
+    home16: 'with me',
 
-        resume1:'Baixar currículo',
-  
-    },
-  ]
-  
+    about1: 'Know Who',
+    about2: 'I Am',
+    about3: "Hello everyone, I'm",
+    about4: 'Pablo Ítalo',
+    about5: ', a',
+    about6:
+      'Senior Software Engineer | Fractional CTO | Tech Lead | AI Specialist',
+    about7: 'I work with cutting-edge technologies, including',
+    about8:
+      'JavaScript, TypeScript, Python, Next.js, NestJS, React, Django, LangChain, OpenAI API, AWS, and more.',
+    about9: 'With 6+ years of experience, I specialize in',
+    about10:
+      "AI-powered SaaS platforms, LLM agents, microservices architecture, and scalable web/mobile solutions. I've launched platforms to 10k+ users and >$200K ARR.",
+    about11:
+      'Besides coding, there are a few other activities that I love to engage in!',
+    about12: 'Building AI-powered startups',
+    about13: 'Mentoring development teams',
+    about14: 'Speaking at tech conferences',
+    about15: '"Always do your best!"',
+    about16: 'Professional',
+    about17: 'Skillset',
+    about18: 'Tools',
+    about19: 'I use',
+    about20: 'Days I',
+    about21: 'Code',
 
+    projects: [
+      {
+        projects_image: iluy,
+        projects_show: 'Iluy.ai',
+        projects_subHeader: 'Senior Full-Stack & AI Specialist (Contract)',
+        projects_show_1:
+          'Multi-model AI chatbot platform. Built with Next.js + NestJS + LangChain + Vercel AI SDK. Delivered AI agent for deep research with 5k+ users and 90% match accuracy. Serverless architecture with <$100/month costs.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://iluy.ai/',
+        highlight: true,
+      },
+      {
+        projects_image: aorforms,
+        projects_show: 'AorForms.com',
+        projects_subHeader: 'Fractional CTO & Tech Lead (Contract)',
+        projects_show_1:
+          'LegalTech SaaS platform built with Django + Next.js + PostgreSQL + AWS. Integrated AI verbal-signature agent with LangChain + OpenAI, reducing onboarding time by 65%. Scaled to 10k+ users with 99.9% uptime and $200K+ ARR.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://aorforms.com/',
+        highlight: true,
+      },
+      {
+        projects_image: eazyclock_dashboard,
+        projects_show: 'EazyClock.com',
+        projects_subHeader: 'Fractional CTO & Tech Lead (Contract)',
+        projects_show_1:
+          'Appointment SaaS platform built with Next.js + NestJS + AWS. Features AI scheduler that boosted booking conversion by 22%. Grew to 10k+ users in 6 months with modern architecture.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://eazyclock.com/',
+        highlight: true,
+      },
+      {
+        projects_image: elevateab,
+        projects_show: 'ElevateAB.com',
+        projects_subHeader: 'Senior Full-Stack Engineer (Contract)',
+        projects_show_1:
+          'Modernized platform with Next.js + Django + Cloudflare Workers. Optimized workers to support 1,200+ tenants with <100ms latency. Re-architected e-commerce infrastructure supporting $1M+ revenue growth.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://elevateab.com/',
+        highlight: true,
+      },
+      {
+        projects_image: reboucasofficial,
+        projects_show: 'Rebouças University',
+        projects_subHeader: 'Tech Lead',
+        projects_show_1:
+          'Complete institutional platform with test portal (React + Next.js + PHP/Laravel), main website with API integrations, and rebuilt student portal (Moodle + React + PHP). Implemented CI/CD reducing production defects by 50%.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://faculdadereboucas.com.br/',
+        highlight: true,
+      },
+      {
+        projects_image: docstree,
+        projects_show: 'Docs-Tree',
+        projects_subHeader: 'Full-Stack Developer',
+        projects_show_1:
+          'International and scalable platform for searching documents and freelancers. Full-stack development with modern technologies for startup growth in the digital realm.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+        highlight: false,
+      },
+      {
+        projects_image: shop,
+        projects_show: 'Tecknow Solutions',
+        projects_subHeader: 'Full-Stack Developer',
+        projects_show_1:
+          'Multiple e-commerce projects with sales, promotions, shipping, marketing, gateway integrations. Migrated legacy systems to microservices, reducing deployments from days to hours.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+        highlight: false,
+      },
+      {
+        projects_image: hewantsbarber,
+        projects_show: 'Tecknow Solutions',
+        projects_subHeader: 'Full-Stack Developer',
+        projects_show_1:
+          'Complete dashboard for sales, records, appointments, sales control. Built as part of 30+ projects delivered at Tecknow Solutions using various technologies including PHP, WordPress, TypeScript, Node, Docker.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+      },
+      {
+        projects_image: pabloitalo,
+        projects_show: 'Personal Portfolio',
+        projects_subHeader: 'Full-Stack Developer',
+        projects_show_1:
+          'Personal website showcasing full-stack development skills. Built with React and modern web technologies. Open source on GitHub.',
+        projects_show_ghLink: 'https://github.com/pabloitaloac/pabloitalo.com',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://pabloitalo.com/',
+      },
+      {
+        projects_image: araujocabral,
+        projects_show: 'Araújo Cabral',
+        projects_subHeader: 'Full-Stack Developer',
+        projects_show_1:
+          'Institutional website for law firm showcasing areas of practice, locations, specialties, and team. Professional web development for legal sector growth and digital presence.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+      },
+    ],
+
+    resume1: 'Download CV',
+  },
+  {
+    language: 'BR',
+
+    navbar1: 'Home',
+    navbar2: 'Sobre mim',
+    navbar3: 'Projetos',
+    navbar4: 'Currículo',
+
+    footer1: 'Desenvolvido com ❤️ por Pablo Ítalo',
+    footer2: `Copyright © ${new Date().getFullYear()} Pablo Italo`,
+
+    home1: 'Olá!',
+    home2: 'Meu nome é',
+    home3:
+      'Engenheiro de Software Sênior | CTO Fracionário | Tech Lead | Especialista em IA',
+    home4: 'Breve',
+    home5: 'INTRODUÇÃO',
+    home6: 'sobre mim',
+    home7:
+      'Engenheiro full-stack multilíngue com 6+ anos de experiência construindo produtos web e mobile de alto impacto. CTO Fracionário e Tech Lead para startups, com capacidade comprovada de entregar MVPs em 2-4 semanas e escalar para 10k+ usuários globais.',
+    home8: 'Tenho proficiência em linguagens e frameworks modernos, como',
+    home9:
+      'JavaScript, TypeScript, Python, Node.js, Next.js, NestJS, React, React Native, Django.',
+    home10:
+      'Além disso, me especializo em tecnologias de IA/ML incluindo LangChain, OpenAI API, Vercel AI SDK, Vector DBs, e plataformas cloud como AWS, Google Cloud, e Azure.',
+    home11: 'Meu principal interesse é inovar e desenvolver',
+    home12:
+      'plataformas SaaS alimentadas por IA, agentes LLM, e soluções web/mobile escaláveis.',
+    home13: 'ME ENCONTRE EM',
+    home14: 'Fique à vontade para se',
+    home15: 'conectar',
+    home16: 'comigo',
+
+    about1: 'Quem',
+    about2: 'eu sou',
+    about3: 'Olá, meu nome é',
+    about4: 'Pablo Ítalo',
+    about5: ', ',
+    about6:
+      'Engenheiro de Software Sênior | CTO Fracionário | Tech Lead | Especialista em IA',
+    about7: 'Trabalho com tecnologias de ponta, incluindo',
+    about8:
+      'JavaScript, TypeScript, Python, Next.js, NestJS, React, Django, LangChain, OpenAI API, AWS, e mais.',
+    about9: 'Com 6+ anos de experiência, me especializo em',
+    about10:
+      'plataformas SaaS alimentadas por IA, agentes LLM, arquitetura de microserviços, e soluções web/mobile escaláveis. Lancei plataformas para 10k+ usuários e >$200K ARR.',
+    about11: 'Além de codar, essas são outras atividades que eu amo fazer!',
+    about12: 'Construir startups alimentadas por IA',
+    about13: 'Mentorar equipes de desenvolvimento',
+    about14: 'Palestrar em conferências de tecnologia',
+    about15: '"Sempre dê o seu melhor!"',
+    about16: 'principais',
+    about17: 'Habilidades profissionais',
+    about18: 'Ferramentas',
+    about19: 'que utilizo',
+    about20: 'Dias que',
+    about21: 'Codo',
+
+    projects1: 'Meus recentes',
+    projects2: 'Trabalhos',
+    projects3: 'Esses são alguns dos projetos que desenvolvi recentemente.',
+
+    projects: [
+      {
+        projects_image: iluy,
+        projects_show: 'Iluy.ai',
+        projects_subHeader:
+          'Engenheiro Full-Stack Sênior & Especialista em IA (Contrato)',
+        projects_show_1:
+          'Plataforma de chatbot multi-modelo de IA. Construída com Next.js + NestJS + LangChain + Vercel AI SDK. Entregue agente de IA para pesquisa profunda com 5k+ usuários e 90% de precisão. Arquitetura serverless com custos <$100/mês.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://iluy.ai/',
+        highlight: true,
+      },
+      {
+        projects_image: aorforms,
+        projects_show: 'AorForms.com',
+        projects_subHeader: 'CTO Fracionário & Tech Lead (Contrato)',
+        projects_show_1:
+          'Plataforma SaaS LegalTech construída com Django + Next.js + PostgreSQL + AWS. Integrado agente de assinatura verbal com IA usando LangChain + OpenAI, reduzindo tempo de onboarding em 65%. Escalado para 10k+ usuários com 99.9% uptime e $200K+ ARR.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://aorforms.com/',
+        highlight: true,
+      },
+      {
+        projects_image: eazyclock_dashboard,
+        projects_show: 'EazyClock.com',
+        projects_subHeader: 'CTO Fracionário & Tech Lead (Contrato)',
+        projects_show_1:
+          'Plataforma SaaS de agendamentos construída com Next.js + NestJS + AWS. Possui agendador com IA que aumentou conversão de reservas em 22%. Cresceu para 10k+ usuários em 6 meses com arquitetura moderna.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://eazyclock.com/',
+        highlight: true,
+      },
+      {
+        projects_image: elevateab,
+        projects_show: 'ElevateAB.com',
+        projects_subHeader: 'Engenheiro Full-Stack Sênior (Contrato)',
+        projects_show_1:
+          'Plataforma modernizada com Next.js + Django + Cloudflare Workers. Workers otimizados para suportar 1,200+ inquilinos com latência <100ms. Re-arquitetada infraestrutura de e-commerce suportando crescimento de receita de $1M+.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://elevateab.com/',
+        highlight: true,
+      },
+      {
+        projects_image: reboucasofficial,
+        projects_show: 'Universidade Rebouças',
+        projects_subHeader: 'Tech Lead',
+        projects_show_1:
+          'Plataforma institucional completa com portal de testes (React + Next.js + PHP/Laravel), site principal com integrações de API, e portal do estudante reconstruído (Moodle + React + PHP). Implementado CI/CD reduzindo defeitos de produção em 50%.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://faculdadereboucas.com.br/',
+        highlight: true,
+      },
+      {
+        projects_image: docstree,
+        projects_show: 'Docs-Tree',
+        projects_subHeader: 'Desenvolvedor Full-Stack',
+        projects_show_1:
+          'Plataforma internacional e escalável para buscar documentos e freelancers. Desenvolvimento full-stack com tecnologias modernas para crescimento de startups no ambiente digital.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+        highlight: false,
+      },
+      {
+        projects_image: shop,
+        projects_show: 'Tecknow Solutions',
+        projects_subHeader: 'Desenvolvedor Full-Stack',
+        projects_show_1:
+          'Múltiplos projetos de e-commerce com vendas, promoções, fretes, marketing, integrações com gateway. Migração de sistemas legados para microserviços, reduzindo deploys de dias para horas.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+        highlight: false,
+      },
+      {
+        projects_image: hewantsbarber,
+        projects_show: 'Tecknow Solutions',
+        projects_subHeader: 'Desenvolvedor Full-Stack',
+        projects_show_1:
+          'Dashboard completa para vendas, registros, agendamentos, controle de vendas. Construído como parte de 30+ projetos entregues na Tecknow Solutions usando várias tecnologias incluindo PHP, WordPress, TypeScript, Node, Docker.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+      },
+      {
+        projects_image: pabloitalo,
+        projects_show: 'Portfólio Pessoal',
+        projects_subHeader: 'Desenvolvedor Full-Stack',
+        projects_show_1:
+          'Site pessoal mostrando habilidades de desenvolvimento full-stack. Construído com React e tecnologias web modernas. Código aberto no GitHub.',
+        projects_show_ghLink: 'https://github.com/pabloitaloac/pabloitalo.com',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: 'https://pabloitalo.com/',
+      },
+      {
+        projects_image: araujocabral,
+        projects_show: 'Araújo Cabral',
+        projects_subHeader: 'Desenvolvedor Full-Stack',
+        projects_show_1:
+          'Site institucional para escritório de advocacia mostrando áreas de atuação, localizações, especialidades e equipe. Desenvolvimento web profissional para crescimento e presença digital no setor jurídico.',
+        projects_show_ghLink: '',
+        projects_show_demoLink: '',
+        projects_show_LiveLink: '',
+      },
+    ],
+
+    resume1: 'Baixar currículo',
+  },
+];

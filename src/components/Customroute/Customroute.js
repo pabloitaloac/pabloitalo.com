@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 
 const CustomRoute = ({ component: Component, loadingFunction, ...rest }) => {
@@ -6,7 +6,7 @@ const CustomRoute = ({ component: Component, loadingFunction, ...rest }) => {
     loadingFunction(); // Run your "loading" function on route change
   }, [loadingFunction]);
 
-  return <Route {...rest} render={(props) => <Component {...props} />} />;
+  return <Route {...rest} render={props => <Component {...props} />} />;
 };
 
 export default CustomRoute;
