@@ -36,14 +36,14 @@ jobs:
         run: |
           if docker ps -a --format '{{.Names}}' | grep -q '^pabloitalo_frontend_prod$'; then
             echo "Container exists"
-            docker-compose -f docker-compose.prod.yml down --volumes --remove-orphans
+            docker compose -f docker-compose.prod.yml down --volumes --remove-orphans
           else
             echo "Container does not exist"         
           fi
 
       - name: Start container
         run: |
-          docker-compose -f docker-compose.prod.yml -p pabloitalo_frontend_prod up --build -d
+          docker compose -f docker-compose.prod.yml -p pabloitalo_frontend_prod up --build -d
 
       - name: Check if container nginx exists
         run: |
@@ -65,5 +65,5 @@ jobs:
 
       - name: Clean up
         run: |
-          docker-compose -f docker-compose.prod.yml down --volumes --remove-orphans
+          docker compose -f docker-compose.prod.yml down --volumes --remove-orphans
           docker system prune -a --volumes --force
