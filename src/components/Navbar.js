@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import logo from '../Assets/logo.png';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { CgGitFork } from 'react-icons/cg';
@@ -115,9 +114,13 @@ function NavBar() {
           }}
         >
           <img
-            src={logo}
+            src={'/media/logo.png'}
             alt='brand'
-            style={{ maxWidth: '120px', cursor: 'pointer' }}
+            style={{
+              maxWidth: '160px',
+              cursor: 'pointer',
+              filter: 'brightness(0) invert(1)',
+            }}
           />
         </Navbar.Brand>
         <Navbar.Toggle
