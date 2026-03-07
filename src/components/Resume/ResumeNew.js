@@ -6,9 +6,10 @@ import { AiOutlineDownload } from 'react-icons/ai';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useTheme } from '../themetype';
 import { loading } from '../Loading/Loading';
-import pdf from '../../Assets/../Assets/resume.pdf';
 
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+
+const pdfPath = '/CV - English.pdf';
 
 const totalpages = [{ singlepage: 1 }, { singlepage: 2 }];
 function ResumeNew() {
@@ -50,7 +51,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: 'center', position: 'relative' }}>
           <Button
             variant='primary'
-            href={pdf}
+            href={pdfPath}
             target='_blank'
             style={{ maxWidth: '250px' }}
           >
@@ -85,8 +86,7 @@ function ResumeNew() {
                       height: '100%',
                     }}
                   >
-                    {/* <Document file={pdfUrl}  > */}
-                    <Document file={pdf}>
+                    <Document file={pdfPath}>
                       <Page
                         pageNumber={single.singlepage}
                         width={isMobile ? width * 0.7 : width / 3.2}
@@ -103,7 +103,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: 'center', position: 'relative' }}>
           <Button
             variant='primary'
-            href={pdf}
+            href={pdfPath}
             target='_blank'
             style={{ maxWidth: '250px' }}
           >
