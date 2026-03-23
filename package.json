@@ -25,19 +25,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
+    "start": "vite --port 3000 --strictPort",
+    "dev": "vite --port 3000 --strictPort",
     "build": "vite build",
     "test": "vitest --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "preview": "vite preview",
+    "preview": "vite preview --port 3000 --strictPort",
     "lint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "lint:check": "eslint \"src/**/*.{js,jsx}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,json,css,md}\"",
-    "lint:fix": "npm run lint && npm run format",
-    "dev-setup": "node scripts/dev-setup.js",
-    "cleanup": "node scripts/cleanup.js"
+    "lint:fix": "npm run lint && npm run format"
   },
   "eslintConfig": {
     "extends": [
