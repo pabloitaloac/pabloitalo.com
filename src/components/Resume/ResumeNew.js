@@ -3,11 +3,8 @@ import { Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Particle from '../Particle';
 import { AiOutlineDownload } from 'react-icons/ai';
-import { Document, Page, pdfjs } from 'react-pdf';
 import { useTheme } from '../themetype';
 import { loading } from '../Loading/Loading';
-
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 const pdfPath = '/CV - English.pdf';
 
@@ -25,10 +22,6 @@ function ResumeNew() {
   }, []);
 
   const isMobile = window.screen.width < 720;
-
-  useEffect(() => {
-    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-  }, []);
 
   return (
     <div
@@ -60,45 +53,22 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        {/* <Row className="resume" style={{gap:'10px'}}> */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
-            margin: '20px auto 20px auto',
-            justifyContent: 'center',
-            width: '80%',
-            gap: '20px',
-          }}
-        >
-          {totalpages &&
-            totalpages.map(single => {
-              if (single.singlepage) {
-                return (
-                  <div
-                    key={single.singlepage}
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      width: '100%',
-                      height: '100%',
-                    }}
-                  >
-                    <Document file={pdfPath}>
-                      <Page
-                        pageNumber={single.singlepage}
-                        width={isMobile ? width * 0.7 : width / 3.2}
-                      />
-                    </Document>
-                  </div>
-                );
-              }
-              return null;
-            })}
-        </div>
-        {/* </Row>;z */}
+          <iframe
+            title={`resume-full`}
+            src={`${pdfPath}#page=1&view=FitH`}
+            style={{
+              border: 'none',
+              width: isMobile ? width * 0.7 : width,
+              height: isMobile ? 480 : "auto",
+              maxWidth: 1000,
+              minHeight: isMobile ? 480 : 1000,
+              borderRadius: '8px',
+              marginTop: '20px',
+              marginBottom: '20px',
+            }}
+          />
+
+
 
         <Row style={{ justifyContent: 'center', position: 'relative' }}>
           <Button
