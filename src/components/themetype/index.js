@@ -1,7 +1,6 @@
 // ThemeContext.js
 import { createContext, useContext, useEffect, useState } from 'react';
-
-const { alldata } = require('./datatotranslate');
+import { alldata } from './datatotranslate';
 
 const ThemeContext = createContext();
 
