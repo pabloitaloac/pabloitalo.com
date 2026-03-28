@@ -19,6 +19,7 @@ import './style.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { loading } from './components/Loading/Loading';
+import SeoManager from './components/SeoManager';
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <SeoManager />
         <Navbar />
         {/* <Preloader load={load} /> */}
         {/* <div className="App" id={load ? "no-scroll" : "scroll"}> */}
